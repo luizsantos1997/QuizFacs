@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizFacs.Android", "QuizFac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizFacs", "QuizFacs\QuizFacs.csproj", "{979F619D-78B1-4291-B9C2-E8576448DD30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizFacs.API", "QuizFacs.API\QuizFacs.API.csproj", "{A7C783E7-463E-49AC-BB1A-E959D349E1AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizFacs.Core", "QuizFacs.Core\QuizFacs.Core.csproj", "{A59CD77E-A3B2-4BC2-AB01-65F950DEE1B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +21,9 @@ Global
 		{979F619D-78B1-4291-B9C2-E8576448DD30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{979F619D-78B1-4291-B9C2-E8576448DD30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{979F619D-78B1-4291-B9C2-E8576448DD30}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A7C783E7-463E-49AC-BB1A-E959D349E1AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A7C783E7-463E-49AC-BB1A-E959D349E1AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A7C783E7-463E-49AC-BB1A-E959D349E1AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A7C783E7-463E-49AC-BB1A-E959D349E1AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A59CD77E-A3B2-4BC2-AB01-65F950DEE1B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A59CD77E-A3B2-4BC2-AB01-65F950DEE1B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A59CD77E-A3B2-4BC2-AB01-65F950DEE1B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A59CD77E-A3B2-4BC2-AB01-65F950DEE1B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
