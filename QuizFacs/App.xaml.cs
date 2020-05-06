@@ -11,7 +11,7 @@ namespace QuizFacs
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new LoginPage());
+            MainPage = new NavigationPage(new HomePage());//new LoginPage();
         }
 
         protected override void OnStart()
@@ -24,6 +24,10 @@ namespace QuizFacs
 
         protected override void OnResume()
         {
+            var newPage = new HomePage();
+            NavigationPage.SetHasNavigationBar(newPage, false);
+            NavigationPage.SetHasBackButton(newPage, false);
+            App.Current.MainPage = new NavigationPage(newPage);
         }
     }
 }
