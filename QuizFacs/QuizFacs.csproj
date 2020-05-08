@@ -22,4 +22,9 @@
   <ItemGroup>
     <Compile Remove="Pages\MainPage.xaml.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Pages\CreateAnswerPage.xaml.cs">
+      <DependentUpon>CreateAnswerPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>
