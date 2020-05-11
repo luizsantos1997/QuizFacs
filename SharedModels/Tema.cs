@@ -1,4 +1,4 @@
-﻿namespace QuizFacs.ViewModel
+﻿namespace SharedModels
 {
     public class Tema
     {

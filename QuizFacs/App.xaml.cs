@@ -1,7 +1,9 @@
 ﻿using System;
+using QuizFacs.Data;
 using QuizFacs.Pages;
+using QuizFacs.Services;
+using SharedModels;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace QuizFacs
 {
@@ -10,12 +12,25 @@ namespace QuizFacs
         public App()
         {
             InitializeComponent();
-
-            MainPage = new NavigationPage(new HomePage());//new LoginPage();
         }
 
         protected override void OnStart()
         {
+            using(var sql = new SqLiteServices())
+            {
+                UsuarioSQLITE data;
+                try
+                {
+                    data = sql.GetUserSaved();
+                    MainPage = new NavigationPage(new HomePage(data));//new LoginPage();
+
+                }
+                catch (Exception)
+                {
+                    sql.CriarBancoDeDados();
+                    MainPage = new LoginPage();
+                }
+            }
         }
 
         protected override void OnSleep()
@@ -24,10 +39,20 @@ namespace QuizFacs
 
         protected override void OnResume()
         {
-            var newPage = new HomePage();
-            NavigationPage.SetHasNavigationBar(newPage, false);
-            NavigationPage.SetHasBackButton(newPage, false);
-            App.Current.MainPage = new NavigationPage(newPage);
+            using (var sql = new SqLiteServices())
+            {
+                UsuarioSQLITE data;
+                try
+                {
+                    data = sql.GetUserSaved();
+                    App.Current.MainPage = new NavigationPage(new HomePage(data));
+                }
+                catch (Exception)
+                {
+                    MainPage = new LoginPage();
+                }
+            }
+            
         }
     }
 }
