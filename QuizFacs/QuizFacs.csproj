@@ -20,6 +20,7 @@
     <Folder Include="Pages\" />
     <Folder Include="Services\" />
     <Folder Include="Data\" />
+    <Folder Include="Assets\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Pages\MainPage.xaml.cs" />
@@ -28,6 +29,14 @@
     <Compile Update="Pages\CreateAnswerPage.xaml.cs">
       <DependentUpon>CreateAnswerPage.xaml</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\splash.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="..\SharedModels\SharedModels.projitems" Label="Shared" Condition="Exists('..\SharedModels\SharedModels.projitems')" />
 </Project>

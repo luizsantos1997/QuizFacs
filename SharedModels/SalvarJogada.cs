@@ -5,6 +5,7 @@ namespace SharedModels
     {
 	public int IdPergunta {get; set;}
 	public int IdUsuario {get; set;}
+    public bool GetPoint { get; set; }
 
         public SalvarJogada()
         {

@@ -12,11 +12,7 @@ namespace QuizFacs
         public App()
         {
             InitializeComponent();
-        }
-
-        protected override void OnStart()
-        {
-            using(var sql = new SqLiteServices())
+            using (var sql = new SqLiteServices())
             {
                 UsuarioSQLITE data;
                 try
@@ -33,25 +29,17 @@ namespace QuizFacs
             }
         }
 
+        protected override void OnStart()
+        {
+            
+        }
+
         protected override void OnSleep()
         {
         }
 
         protected override void OnResume()
         {
-            using (var sql = new SqLiteServices())
-            {
-                UsuarioSQLITE data;
-                try
-                {
-                    data = sql.GetUserSaved();
-                    App.Current.MainPage = new NavigationPage(new HomePage(data));
-                }
-                catch (Exception)
-                {
-                    MainPage = new LoginPage();
-                }
-            }
             
         }
     }
