@@ -31,6 +31,14 @@ namespace QuizFacs.Pages
                 Navigation.InsertPageBefore(new QuizPage(this.model, _id), this);
                 await Navigation.PopAsync();
             }
+            else
+            {
+                Text.Text = "Não existe mais perguntas disponíveis!";
+                Loading.IsVisible = false;
+                NavigationPage.SetHasNavigationBar(this, true);
+                NavigationPage.SetHasBackButton(this, true);
+            }
+
         }
         
     }

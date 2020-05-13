@@ -11,8 +11,9 @@
         <Label
             FontSize="Title"
             Text="Carregando Pergunta"
-            Margin="0,0,0,20"
+            Margin="10,0,10,20"
             TextColor="White"
+            x:Name="Text"
             />
         <ActivityIndicator
             HorizontalOptions="Center"
@@ -20,6 +21,7 @@
             IsRunning="True"
             IsVisible="True"
             Color="White"
+            x:Name="Loading"
             />
 
 
